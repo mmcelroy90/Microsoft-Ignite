@@ -6,7 +6,7 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get"
+        "post"
       ]
     },
     {
@@ -15,13 +15,13 @@
       "name": "res"
     },
     {
-      "type": "cosmosDB",
       "name": "product",
+      "type": "cosmosDB",
       "databaseName": "icecream",
       "collectionName": "products",
-      "connectionStringSetting": "CosmosDBConnectionString",
-      "direction": "in",
-      "Id": "{Query.id}"
+      "createIfNotExists": true,
+      "connectionStringSetting": "CosmosDbConnectionString",
+      "direction": "out"
     }
   ]
 }
